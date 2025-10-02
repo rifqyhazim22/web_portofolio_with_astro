@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NextSteps from "../components/NextSteps.astro";
+import UpdatesList from "../components/UpdatesList.astro";
+import "../styles/overrides.css";
+---
+
+<Layout title="Rifqy Hazim HR — AI Prompter & Web Developer">
+  <!-- HERO -->
+  <h1 class="h1">Rifqy Hazim HR</h1>
+  <p class="sub">AI Prompter & Strategist · Web Developer</p>
+  <p class="sub">Saya merancang pengalaman digital dengan AI—ringkas, terukur, dan bisa dipakai hari ini.</p>
+
+  <div class="grid" style="margin-top:14px">
+    <a class="pill" href="/works">Lihat Works</a>
+    <a class="pill" href="/playbooks">Belajar AI (Gratis)</a>
+  </div>
+
+  <!-- Signature / Descender -->
+  <div class="card" style="margin-top:16px">
+    <div class="sub" style="font-style:italic">
+      “In the beginning there was dark. Until someone set themselves aflame. Only then did the universe know light.”
+    </div>
+  </div>
+
+  <!-- APA YANG SAYA LAKUKAN (compact) -->
+  <h2 class="h2" style="margin-top:24px">Apa yang Saya Lakukan</h2>
+  <div class="grid grid-3">
+    <a class="card card--compact" href="/works">
+      <div class="k">Prompt Engineering</div>
+      <div class="sub">Video, image, dan text—pola prompt yang konsisten.</div>
+    </a>
+    <a class="card card--compact" href="/projects">
+      <div class="k">Web Delivery</div>
+      <div class="sub">Landing ringan (Astro, GitHub). Fokus ke performa.</div>
+    </a>
+    <a class="card card--compact" href="/playbooks">
+      <div class="k">Strategy & Edukasi</div>
+      <div class="sub">Playbooks & workflow yang siap pakai.</div>
+    </a>
+  </div>
+
+  <!-- PLAYBOOKS (tombol saja) -->
+  <h2 class="h2" style="margin-top:24px">Playbooks</h2>
+  <p class="sub">Kerangka kerja praktis untuk 5 industri.</p>
+  <a class="pill" href="/playbooks">Lihat Playbooks & Edukasi AI →</a>
+
+  <!-- FEATURED WORKS -->
+  <h2 class="h2" style="margin-top:24px">Featured Works</h2>
+  <div class="grid grid-2">
+    <a class="card" href="/works#video">
+      <div class="k">AI Generated Video</div>
+      <div class="sub">Kumpulan video hasil prompt & scene direction.</div>
+    </a>
+    <a class="card" href="/works#image">
+      <div class="k">AI Generated Image</div>
+      <div class="sub">Eksperimen visual & gaya dengan kontrol prompt.</div>
+    </a>
+  </div>
+
+  <!-- LEARNING HUB (compact) -->
+  <h2 class="h2" style="margin-top:24px">Learning Hub</h2>
+  <div class="grid">
+    <a class="card card--compact" href="/playbooks#basics">
+      <div class="k">AI Basics</div><div class="sub">Konsep inti & etika.</div>
+    </a>
+    <a class="card card--compact" href="/playbooks#patterns">
+      <div class="k">Prompt Patterns</div><div class="sub">Template reusable.</div>
+    </a>
+    <a class="card card--compact" href="/playbooks#tools">
+      <div class="k">Tools & Workflow</div><div class="sub">Dari brief sampai delivery.</div>
+    </a>
+  </div>
+
+  <!-- UPDATES (sinkron) -->
+  <h2 class="h2" style="margin-top:24px">Updates</h2>
+  <UpdatesList showAllLink={true} />
+
+  <!-- AJAKAN KOLAB (baris penuh seperti Updates) -->
+  <div class="card card--row" style="margin-top:16px">
+    <div>
+      <div class="k">Siap kolaborasi?</div>
+      <div class="sub">Butuh prompt engineer, web delivery ringan, atau penyusunan playbook AI? Hubungi saya.</div>
+    </div>
+    <div style="margin-left:auto">
+      <a class="pill" href="/contact">Contact →</a>
+    </div>
+  </div>
+
+  <hr />
+  <NextSteps current="home" />
+</Layout>

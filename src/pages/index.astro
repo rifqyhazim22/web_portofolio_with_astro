@@ -1,16 +1,94 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
+<Layout title="Rifqy Hazim HR — Home">
+  <h1 class="h1">Rifqy Hazim HR</h1>
+  <p class="sub">AI Prompter & Strategist · Web Developer</p>
+  <p>Saya merancang pengalaman digital dengan AI—ringkas, terukur, dan bisa dipakai hari ini.</p>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <div class="pills" style="margin:10px 0 18px">
+    <a href="/works" class="pill">Lihat Works ↗</a>
+    <a href="/industry" class="pill">Belajar AI (Gratis) ↗</a>
+  </div>
+
+  <section class="card">
+    <div class="k" style="margin-bottom:6px">Quotes</div>
+    <div class="sub">“In the beginning there was dark. Until someone set themselves aflame. Only then did the universe know light.”</div>
+  </section>
+
+  <section>
+    <h2 class="h2">Apa yang Saya Lakukan</h2>
+    <div class="grid grid-2">
+      <a class="tile" href="/works">
+        <div class="k">Prompt Engineering</div>
+        <div class="sub">Video, image, text—dari ide ke hasil.</div>
+      </a>
+      <a class="tile" href="/projects">
+        <div class="k">Web Delivery</div>
+        <div class="sub">Landing ringan & cepat (Astro · GitHub).</div>
+      </a>
+      <a class="tile" href="/industry">
+        <div class="k">Strategy & Edukasi</div>
+        <div class="sub">Playbooks & kerangka kerja yang bisa dipakai.</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h2">Playbooks</h2>
+    <p class="sub">Kerangka kerja praktis untuk lima industri masa depan—AI→AGI/ASI, Crypto, Biotechnology, Energi Terbarukan, dan Space.</p>
+    <div class="pills" style="margin-top:10px">
+      <a href="/industry" class="pill">Lihat Playbooks & Edukasi AI →</a>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h2">Learning Hub</h2>
+    <div class="grid grid-2">
+      <a href="/industry#ai-basics" class="tile">
+        <div class="k">AI Basics</div>
+        <div class="sub">Konsep inti, istilah, dan etika; landasan yang aman & praktis.</div>
+      </a>
+      <a href="/industry#prompt-patterns" class="tile">
+        <div class="k">Prompt Patterns</div>
+        <div class="sub">Polanya apa, kapan dipakai, dan cara menghindari jebakan umum.</div>
+      </a>
+      <a href="/industry#tools-workflow" class="tile">
+        <div class="k">Tools & Workflow</div>
+        <div class="sub">Pipeline dari brief → eksperimen → hasil, dengan contoh alat yang ringan.</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h2">Updates</h2>
+    <div class="grid">
+      <a class="tile" href="/updates/ai-web">
+        <div class="k">AI & Web: Kolaborasi Masa Depan</div>
+        <div class="sub">Kenapa integrasi AI & Web penting untuk kreator & developer.</div>
+      </a>
+      <a class="tile" href="/updates/5-industries">
+        <div class="k">Lima Industri Masa Depan yang Sedang Memanas</div>
+        <div class="sub">AI, Crypto, Biotech, Renewables, Space—ekosistem inovasi.</div>
+      </a>
+      <a class="tile" href="/updates/prompt-engineering">
+        <div class="k">Belajar Prompt Engineering (Praktis)</div>
+        <div class="sub">Metode iterasi 3 langkah untuk hasil yang stabil.</div>
+      </a>
+    </div>
+    <div class="pills" style="margin-top:12px"><a href="/updates" class="pill">Lihat semua updates →</a></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <section>
+    <h2 class="h2">Jelajah Berikutnya</h2>
+    <div class="pills">
+      <a class="pill" href="/about">About</a>
+      <a class="pill" href="/industry">Playbooks</a>
+      <a class="pill" href="/works">Works</a>
+      <a class="pill" href="/projects">Projects</a>
+      <a class="pill" href="/contact">Contact</a>
+    </div>
+  </section>
+</Layout>

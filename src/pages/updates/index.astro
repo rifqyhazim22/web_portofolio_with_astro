@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NextSteps from "../../components/NextSteps.astro";
+import UpdatesList from "../../components/UpdatesList.astro";
+---
+<Layout title="Updates — Rifqy Hazim HR">
+  <h1 class="h1">Updates</h1>
+  <p class="sub">Kurasi kabar & insight singkat seputar AI, Web, dan 5 industri masa depan.</p>
+
+  <UpdatesList showAllLink={false} />
+
+  <hr />
+  <NextSteps current="updates" />
+</Layout>

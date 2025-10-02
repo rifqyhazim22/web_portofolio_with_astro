@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+const { item } = Astro.props; // { icon, title, desc }
+---
+<Layout title={`${item.title} — Playbook`}>
+  <a class="pill" href="/industry">← Kembali</a>
+  <h1 class="h1" style="margin-top:10px">{item.icon} {item.title}</h1>
+  <p class="sub" style="margin-bottom:14px">{item.desc}</p>
+
+  <h2 class="h2">Contoh Playbook</h2>
+  <div class="grid grid-2" style="margin-top:10px">
+    <div class="card"><div class="k">Checklist Harian</div><div class="sub">To-do, prioritas, blocking isu.</div></div>
+    <div class="card"><div class="k">Template Percakapan</div><div class="sub">Kerangka tanya-jawab pelanggan/partner.</div></div>
+    <div class="card"><div class="k">Rangkuman Mingguan</div><div class="sub">Format laporan konsisten.</div></div>
+  </div>
+</Layout>

@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NextSteps from "../components/NextSteps.astro";
+import UpdatesList from "../components/UpdatesList.astro";
+---
+<Layout title="Rifqy Hazim HR — AI Prompter & Web Developer">
+
+  <!-- HERO (Parallax Ringan) -->
+  <section class="hero-parallax" aria-label="Intro">
+    <h1 class="h1" data-parallax="0.25">Rifqy Hazim HR</h1>
+    <p class="sub" data-parallax="0.3">AI Prompter & Strategist · Web Developer</p>
+    <p class="sub" data-parallax="0.35">Saya merancang pengalaman digital dengan AI—ringkas, terukur, dan bisa dipakai hari ini.</p>
+    <div class="grid" style="margin-top:14px" data-parallax="0.4">
+      <a class="pill" href="/works" data-tip="Lihat kumpulan karya">Lihat Works →</a>
+      <a class="pill" href="/playbooks" data-tip="Belajar AI, gratis">Belajar AI (Gratis) →</a>
+    </div>
+  </section>
+
+  <!-- Quotes -->
+  <div class="card" style="margin-top:16px">
+    <div class="k">Quotes</div>
+    <div class="sub" style="font-style:italic">
+      “In the beginning there was dark. Until someone set themselves aflame. Only then did the universe know light.”
+    </div>
+  </div>
+
+  <!-- APA YANG SAYA LAKUKAN -->
+  <h2 class="h2" style="margin-top:24px">Apa yang Saya Lakukan</h2>
+  <div class="grid grid-3">
+    <a class="card" href="/works" data-tip="Contoh hasil Prompt Engineering">
+      <div class="k">Prompt Engineering</div>
+      <div class="sub">Video, image, text—dari ide ke hasil.</div>
+    </a>
+    <a class="card" href="/projects" data-tip="Proyek & deliverable web">
+      <div class="k">Web Delivery</div>
+      <div class="sub">Landing ringan & cepat (Astro · GitHub).</div>
+    </a>
+    <a class="card" href="/playbooks" data-tip="Kerangka belajar terstruktur">
+      <div class="k">Strategy & Edukasi</div>
+      <div class="sub">Playbooks & kerangka kerja yang bisa dipakai.</div>
+    </a>
+  </div>
+
+  <!-- PLAYBOOKS -->
+  <h2 class="h2" style="margin-top:24px">Playbooks</h2>
+  <p class="sub">
+    Kerangka kerja praktis untuk lima industri: AI → AGI/ASI, Crypto, Biotechnology, Energi Terbarukan, dan Space —
+    ringkas, aplikatif, dan privacy-first untuk pemula hingga praktisi.
+  </p>
+  <a class="pill" href="/playbooks" data-tip="Masuk ke halaman Playbooks">Lihat Playbooks & Edukasi AI →</a>
+
+  <!-- FEATURED WORKS -->
+  <h2 class="h2" style="margin-top:24px">Featured Works</h2>
+  <div class="grid grid-2">
+    <a class="card" href="/works#video" data-tip="Video generatif">
+      <div class="k">AI Generated Video</div>
+      <div class="sub">Prompt & scene direction</div>
+    </a>
+    <a class="card" href="/works#image" data-tip="Gambar generatif">
+      <div class="k">AI Generated Image</div>
+      <div class="sub">Explorasi gaya & kontrol prompt</div>
+    </a>
+  </div>
+
+  <!-- LEARNING HUB -->
+  <h2 class="h2" style="margin-top:24px">Learning Hub</h2>
+  <div class="grid grid-3">
+    <a class="card" href="/playbooks#basics" data-tip="Dasar-dasar AI">
+      <div class="k">AI Basics</div>
+      <div class="sub">Konsep inti & etika.</div>
+    </a>
+    <a class="card" href="/playbooks#patterns" data-tip="Pola prompt efektif">
+      <div class="k">Prompt Patterns</div>
+      <div class="sub">Template reusable.</div>
+    </a>
+    <a class="card" href="/playbooks#tools" data-tip="Alat & alur kerja">
+      <div class="k">Tools & Workflow</div>
+      <div class="sub">Dari brief hingga delivery.</div>
+    </a>
+  </div>
+
+  <!-- UPDATES -->
+  <h2 class="h2" style="margin-top:24px">Updates</h2>
+  <UpdatesList showAllLink={true} />
+
+  <!-- SIAP KOLABORASI? -->
+  <h2 class="h2" style="margin-top:24px">Siap Kolaborasi?</h2>
+  <p class="sub">Butuh prompt engineer, web delivery ringan, atau penyusunan playbook AI? Silakan hubungi saya untuk diskusi singkat.</p>
+  <a class="pill" href="/contact" data-tip="Hubungi saya">Contact →</a>
+
+  <hr />
+  <NextSteps current="home" />
+</Layout>

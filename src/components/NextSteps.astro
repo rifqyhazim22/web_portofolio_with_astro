@@ -1,0 +1,19 @@
+---
+const { current = "" } = Astro.props;
+/** daftar rute global */
+const links = [
+  { href: "/about",    label: "About",     key: "about" },
+  { href: "/updates",  label: "Updates",   key: "updates" },
+  { href: "/industry", label: "Playbooks", key: "industry" },
+  { href: "/works",    label: "Works",     key: "works" },
+  { href: "/projects", label: "Projects",  key: "projects" },
+  { href: "/contact",  label: "Contact",   key: "contact" },
+];
+const shown = links.filter(l => l.key !== current);
+---
+<section>
+  <h2 class="h2">Jelajah Berikutnya</h2>
+  <div class="nav" style="margin-top:8px">
+    {shown.map(l => <a class="pill" href={l.href}>{l.label}</a>)}
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+/** Versi homepage lama: setiap kartu menuju halaman detail, bukan ke /updates */
+interface Item {
+  href: string;
+  title: string;
+  sub: string;
+}
+
+const {
+  items = [
+    {
+      href: "/updates/ai-web",
+      title: "AI & Web: Kolaborasi Masa Depan",
+      sub: "Kenapa integrasi AI dan Web (menuju Web3) jadi titik penting untuk kreator & developer.",
+    },
+    {
+      href: "/updates/5-industries",
+      title: "Lima Industri Masa Depan yang Sedang Memanas",
+      sub: "AI, Crypto, Biotech, Renewable Energy, Space — ekosistem inovasi yang saling menguatkan.",
+    },
+    {
+      href: "/updates/prompt-engineering",
+      title: "Belajar Prompt Engineering dengan Pendekatan Praktis",
+      sub: "Metode iterasi 3 langkah: draft → penajaman → uji variasi, untuk hasil AI yang lebih tepat.",
+    },
+  ] as Item[],
+  showAllLink = true,
+} = Astro.props;
+---
+<div class="grid" style="margin-top:14px">
+  {items.map((it) => (
+    <a class="card" href={it.href}>
+      <div class="k">{it.title}</div>
+      <div class="sub">{it.sub}</div>
+    </a>
+  ))}
+</div>
+
+{showAllLink && (
+  <div style="margin-top:14px">
+    <a class="pill" href="/updates">Lihat semua Updates →</a>
+  </div>
+)}

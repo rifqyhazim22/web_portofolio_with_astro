@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NextSteps from "../components/NextSteps.astro";
+import { DRIVE_URL } from "../data/links.js";
+---
+<Layout title="Works — Rifqy Hazim HR">
+  <h1 class="h1">Karya</h1>
+  <p class="sub">Showcase terkurasi (manual). Untuk saat ini, tombol di bawah mengarah ke Google Drive.</p>
+
+  <div class="nav" style="margin:12px 0 18px 0;">
+    <a class="pill" href={DRIVE_URL} target="_blank" rel="noopener">AI Generated Video</a>
+    <a class="pill" href={DRIVE_URL} target="_blank" rel="noopener">AI Generated Image</a>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:6px">
+    <a class="card" href={DRIVE_URL} target="_blank" rel="noopener"><div class="k">AI Generated Video (1)</div><div class="sub">Prompt & scene direction</div></a>
+    <a class="card" href={DRIVE_URL} target="_blank" rel="noopener"><div class="k">AI Generated Image (1)</div><div class="sub">Prompt engineering</div></a>
+  </div>
+
+  <hr />
+  <NextSteps current="works" />
+</Layout>

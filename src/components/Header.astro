@@ -1,0 +1,42 @@
+---
+const path = Astro.url.pathname;
+const is = (p) => path === p ? { 'aria-current': 'page', class: 'active' } : {};
+---
+<header class="sitebar">
+  <div class="bar wrap">
+    <a href="/" class="brand pill">Rifqy Hazim HR</a>
+    <nav class="pills">
+      <a href="/about"     {...is('/about')}>About</a>
+      <a href="/updates"   {...is('/updates')}>Updates</a>
+      <a href="/industry"  {...is('/industry')}>Playbooks</a>
+      <a href="/works"     {...is('/works')}>Works</a>
+      <a href="/projects"  {...is('/projects')}>Projects</a>
+      <a href="/contact"   {...is('/contact')}>Contact</a>
+      <button id="themeToggle" class="pill" type="button" aria-label="Theme toggle">…</button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const R = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  const KEY = 'rh-theme';
+  const label = () => R.dataset.theme === 'dark' ? '🌙 Night' : '☀️ Day';
+
+  // set theme awal
+  const saved = localStorage.getItem(KEY);
+  if (!saved) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    R.dataset.theme = prefersDark ? 'dark' : 'light';
+  } else {
+    R.dataset.theme = saved;
+  }
+  btn.textContent = label();
+
+  // toggle
+  btn.addEventListener('click', () => {
+    R.dataset.theme = (R.dataset.theme === 'dark') ? 'light' : 'dark';
+    localStorage.setItem(KEY, R.dataset.theme);
+    btn.textContent = label();
+  });
+</script>

@@ -1,0 +1,16 @@
+---
+const current = Astro.cookies.get('theme')?.value ?? 'dark';
+---
+<button
+  class="pill"
+  onclick="
+    const r=document.documentElement;
+    const now=r.getAttribute('data-theme')||'dark';
+    const next = now==='dark' ? 'light' : 'dark';
+    r.setAttribute('data-theme', next);
+    document.cookie='theme='+next+';path=/;max-age=31536000'
+  "
+  aria-label="Toggle theme"
+>
+  Theme
+</button>

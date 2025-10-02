@@ -1,0 +1,96 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NextSteps from "../../components/NextSteps.astro";
+---
+<Layout title="Playbooks & Edukasi AI — Rifqy Hazim HR">
+  <h1 class="h1">Playbooks & Edukasi AI</h1>
+  <p class="sub">Pilih tema untuk membaca ringkasan, dampak potensial, dan cara mulai secara praktis.</p>
+
+  <!-- 5 Playbooks Industri -->
+  <div class="grid grid-2" style="margin-top:12px">
+    <a class="card" href="/industry/ai">
+      <div class="k">AI → AGI → ASI</div>
+      <div class="sub">Dari sistem spesifik ke kecerdasan umum & melampaui manusia: peluang & etika.</div>
+    </a>
+    <a class="card" href="/industry/crypto">
+      <div class="k">Crypto in Finance</div>
+      <div class="sub">Blockchain, tokenisasi aset, smart contracts, dan model ekonomi baru.</div>
+    </a>
+    <a class="card" href="/industry/biotech">
+      <div class="k">Biotechnology</div>
+      <div class="sub">Rekayasa genetika, terapi molekuler, pangan presisi, material hayati.</div>
+    </a>
+    <a class="card" href="/industry/energy">
+      <div class="k">Renewable Energy</div>
+      <div class="sub">Surya, angin, air, geotermal, biomassa + baterai & smart grid.</div>
+    </a>
+    <a class="card" href="/industry/space">
+      <div class="k">Space Exploration</div>
+      <div class="sub">Satelit, earth observation, eksplorasi planet, dan ekonomi orbit.</div>
+    </a>
+  </div>
+
+  <hr />
+
+  <!-- Learning Hub -->
+  <section>
+    <h2 class="h2">Learning Hub</h2>
+    <p class="sub">Pengantar singkat yang menyatu—ringkas, edukatif, dan siap dipakai sebagai pijakan awal.</p>
+
+    <!-- AI Basics -->
+    <div class="card" style="margin-top:12px">
+      <div class="k">AI Basics</div>
+      <div class="sub" style="margin-top:6px">
+        <strong>Gambaran Umum.</strong>
+        AI Basics adalah pondasi untuk memahami bagaimana mesin belajar dan mengambil keputusan.
+        Fokusnya pada pembedaan AI sempit (narrow AI) yang spesifik tugas dan AI umum (AGI) yang mampu memahami berbagai konteks.
+        Penjelasan dibuat sederhana agar mudah diikuti tanpa latar belakang teknis.
+      </div>
+      <div class="sub" style="margin-top:8px">
+        <strong>Penerapan Nyata.</strong>
+        Rekomendasi konten, asisten suara, hingga filter spam email—contoh sehari-hari bagaimana AI bekerja di belakang layar.
+      </div>
+      <div class="sub" style="margin-top:8px">
+        <strong>Langkah Awal.</strong>
+        Coba chatbot publik dan baca artikel pengantar istilah seperti model, data, dan algoritma—cukup 15–20 menit untuk memperoleh peta konsep awal.
+      </div>
+    </div>
+
+    <!-- Prompt Patterns -->
+    <div class="card" style="margin-top:12px">
+      <div class="k">Prompt Patterns</div>
+      <div class="sub" style="margin-top:6px">
+        <strong>Gambaran Umum.</strong>
+        Prompt Patterns mengajarkan cara menyusun instruksi efektif untuk AI. Kualitas output sangat dipengaruhi kejelasan, konteks, dan detail prompt.
+      </div>
+      <div class="sub" style="margin-top:8px">
+        <strong>Penerapan Nyata.</strong>
+        Desainer memakai pola deskriptif untuk konsistensi visual; penulis memakai pola langkah-demi-langkah agar struktur artikel runtut dan lengkap.
+      </div>
+      <div class="sub" style="margin-top:8px">
+        <strong>Langkah Awal.</strong>
+        Ambil prompt singkat → tingkatkan detail (tujuan, gaya, batasan) → bandingkan hasil. Simpan versi yang paling stabil sebagai template.
+      </div>
+    </div>
+
+    <!-- Tools & Workflow -->
+    <div class="card" style="margin-top:12px">
+      <div class="k">Tools & Workflow</div>
+      <div class="sub" style="margin-top:6px">
+        <strong>Gambaran Umum.</strong>
+        Mengenalkan ekosistem alat: generator teks/gambar, editor video berbasis AI, dan integrasi API. Fokusnya pada memilih tool sesuai tujuan.
+      </div>
+      <div class="sub" style="margin-top:8px">
+        <strong>Penerapan Nyata.</strong>
+        Dari ide → visual mock → skrip → video: setiap tahap memanfaatkan tool berbeda namun saling terhubung agar iterasi cepat dan terukur.
+      </div>
+      <div class="sub" style="margin-top:8px">
+        <strong>Langkah Awal.</strong>
+        Pilih satu tool yang relevan, buat proyek mini (1 paragraf ide → 1 output jadi), lalu evaluasi apa yang perlu diperbaiki di iterasi berikutnya.
+      </div>
+    </div>
+  </section>
+
+  <hr />
+  <NextSteps current="industry" />
+</Layout>

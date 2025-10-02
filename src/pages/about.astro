@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NextSteps from "../components/NextSteps.astro";
+---
+<Layout title="About — Rifqy Hazim HR">
+  <section style="margin-top:10px">
+    <h1 class="h1">About</h1>
+    <p class="sub" style="max-width:70ch">
+      Saya fokus pada <strong>AI Prompting</strong>, <strong>Strategi</strong>, dan <strong>Web Development</strong>.
+      Misinya sederhana: menghadirkan solusi digital yang <em>ringkas</em>, <em>terukur</em>, dan <em>siap dipakai hari ini</em>—tanpa
+      membagikan data pribadi sensitif. Halaman ini dirancang sebagai perkenalan singkat
+      sekaligus gerbang edukasi untuk AI & web.
+    </p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2 class="h2">Filosofi & Cara Pandang</h2>
+    <div class="card">
+      <p class="sub" style="margin:0">
+        Teknologi bernilai ketika membantu orang menyelesaikan pekerjaan dengan lebih baik.
+        Prinsip kerja saya: <strong>jelas</strong> (tujuan & batasan), <strong>cepat</strong> (iterasi kecil), dan <strong>aman</strong> (minim data sensitif).
+        Motto: <em>Ad Astra Abyssosque</em> — menjelajah kemungkinan setinggi langit dan sedalam mungkin secara disiplin.
+      </p>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Apa yang Saya Lakukan (klik-able + rename) -->
+  <section>
+    <h2 class="h2">Apa yang Saya Lakukan</h2>
+    <div class="grid grid-3" style="margin-top:10px">
+      <a class="card" href="/works" style="text-decoration:none; color:inherit">
+        <div class="k">Prompt Engineering</div>
+        <div class="sub">Video · Image · Text — dari ide ke hasil.</div>
+      </a>
+      <a class="card" href="/projects" style="text-decoration:none; color:inherit">
+        <div class="k">Web Delivery</div>
+        <div class="sub">Landing ringan & cepat (Astro · GitHub · Vercel).</div>
+      </a>
+      <a class="card" href="/industry" style="text-decoration:none; color:inherit">
+        <div class="k">Strategy & Edukasi</div>
+        <div class="sub">Playbooks & kerangka kerja yang bisa direplikasi.</div>
+      </a>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Learning Hub (baru di About) -->
+  <section>
+    <h2 class="h2">Learning Hub</h2>
+    <div class="grid grid-3" style="margin-top:10px">
+      <a class="card" href="/industry" style="text-decoration:none; color:inherit">AI Basics</a>
+      <a class="card" href="/industry" style="text-decoration:none; color:inherit">Prompt Patterns</a>
+      <a class="card" href="/industry" style="text-decoration:none; color:inherit">Tools & Workflow</a>
+    </div>
+  </section>
+
+  <hr />
+  <NextSteps current="about" />
+</Layout>

@@ -1,0 +1,72 @@
+:root{
+  --bg:#0b1220;--fg:#dbe7ff;--muted:#9fb4d1;--card:#0f1a2e;--stroke:rgba(155,176,210,.25);
+  --accent:#7aa2ff;--radius:9999px;--pad:16px;--gap:16px;--shadow:0 3px 14px rgba(0,0,0,.12)
+}
+html[data-theme="light"]{
+  --bg:#f6f8ff;--fg:#0b1220;--muted:#3a5579;--card:#ffffff;--stroke:rgba(11,18,32,.15);
+  --accent:#2d5bff;--shadow:0 3px 14px rgba(11,18,32,.06)
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:22px}
+.h1{font-weight:800;font-size:34px;margin:6px 0 12px}
+.h2{font-weight:800;font-size:22px;margin:16px 0 10px}
+.k{font-weight:700} .sub{color:var(--muted)}
+.hr{height:1px;background:var(--stroke);margin:24px 0}
+
+/* Mekanik tombol & tile (disamakan) */
+.interactive{
+  border:1px solid var(--stroke);background:transparent;color:var(--fg);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+  box-shadow:var(--shadow)
+}
+.interactive:hover{transform:translateY(-1px)}
+.interactive:active{transform:translateY(0)}
+.interactive:focus-visible{outline:2px solid color-mix(in oklab, var(--accent) 70%, transparent);outline-offset:2px}
+
+/* Pills (menu & tombol kecil) */
+.pills{display:flex;gap:10px;flex-wrap:wrap}
+.pill, nav a{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 16px;border-radius:var(--radius);
+}
+nav a, .pill{border:1px solid var(--stroke);color:var(--fg);background:transparent}
+nav a.active,[aria-current="page"]{
+  background:linear-gradient(180deg, rgba(122,162,255,.12), rgba(122,162,255,.06));
+  border-color:rgba(122,162,255,.35);box-shadow:0 0 0 1px rgba(122,162,255,.15) inset
+}
+nav a:hover,.pill:hover{transform:translateY(-1px)}
+
+/* Card (konten blok) – tambah padding supaya garis nggak nempel teks */
+.card{
+  background:var(--card);border:1px solid var(--stroke);border-radius:16px;
+  padding:18px 20px;box-shadow:var(--shadow)
+}
+
+/* Tile (kartu klikable) – sama mekaniknya dengan pill */
+.tile{
+  display:block;border-radius:16px;background:var(--card);
+  padding:18px 20px; /* > biar garis gak nempel teks */
+}
+.tile .k{font-weight:800;margin:0 0 4px}
+.tile .sub{color:var(--muted);margin:0}
+
+/* Terapkan kelas .interactive ke tile & pill */
+.tile,.pill,nav a{box-shadow:var(--shadow)}
+.tile,.pill,nav a{transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease}
+.tile:hover{transform:translateY(-1px)}
+.tile:active{transform:translateY(0)}
+.tile:focus-visible{outline:2px solid color-mix(in oklab, var(--accent) 70%, transparent);outline-offset:2px}
+
+/* Grid */
+.grid{display:grid;gap:var(--gap)}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:760px){.grid-2{grid-template-columns:1fr}}
+
+/* Sticky header */
+.sitebar{position:sticky;top:0;z-index:50;background:color-mix(in oklab, var(--bg) 85%, transparent);
+  border-bottom:1px solid var(--stroke);backdrop-filter:saturate(140%) blur(8px)}
+.sitebar .bar{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700}

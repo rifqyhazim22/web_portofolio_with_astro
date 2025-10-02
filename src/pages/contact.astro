@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NextSteps from "../components/NextSteps.astro";
+---
+<Layout title="Contact — Rifqy Hazim HR">
+  <h1 class="h1">Contact</h1>
+  <div class="grid grid-2" style="margin-top:14px">
+    <a class="card" href="mailto:rifqyhazimforbs@gmail.com"><div class="k">Email</div><div class="sub">rifqyhazimforbs@gmail.com</div></a>
+    <a class="card" href="https://wa.me/6282123008601" target="_blank" rel="noopener"><div class="k">WhatsApp</div><div class="sub">082123008601</div></a>
+    <a class="card" href="https://github.com/rifqyhazim22" target="_blank" rel="noopener"><div class="k">GitHub</div><div class="sub">rifqyhazim22</div></a>
+    <a class="card" href="https://instagram.com/rifqy__hazim._" target="_blank" rel="noopener"><div class="k">Instagram</div><div class="sub">@rifqy__hazim._</div></a>
+  </div>
+
+  <hr />
+
+  <!-- FAQ dipindah ke Contact -->
+  <section>
+    <h2 class="h2">FAQ (Cara Saya Bekerja)</h2>
+    <div class="grid" style="margin-top:10px">
+      <div class="card">
+        <div class="k">Apakah website ini menyimpan data pribadi?</div>
+        <div class="sub">Tidak. Website ini tidak menampilkan nomor, alamat, atau identitas sensitif. Hubungi saya melalui opsi di atas.</div>
+      </div>
+      <div class="card">
+        <div class="k">Apa tools utama yang digunakan?</div>
+        <div class="sub">Astro untuk web statis cepat; GitHub untuk versioning; Vercel untuk deploy. AI tools untuk riset & produksi konten.</div>
+      </div>
+      <div class="card">
+        <div class="k">Seperti apa alur kerja tipikal?</div>
+        <div class="sub">Brief → definisi tujuan & batasan → prototipe cepat → iterasi singkat → delivery. Fokus pada hasil ringkas & terukur.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+  <NextSteps current="contact" />
+</Layout>

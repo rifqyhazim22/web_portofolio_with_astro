@@ -1,0 +1,258 @@
+/* --- UTIL HOME --- */
+.card--compact{
+  padding:12px 14px!important;
+  border-radius:14px!important;
+  display:block;
+}
+.card--row{
+  padding:16px 18px!important;
+  border-radius:16px!important;
+  display:block;
+}
+.row-list{ display:flex; flex-direction:column; gap:12px; }
+.btn-outline{
+  display:inline-block; padding:10px 14px; border:1px solid var(--a-border);
+  border-radius:12px; text-decoration:none;
+}
+.section{ margin-top:24px; }
+.section > .h2{ margin-bottom:8px; }
+/* === Border/Garis Adaptif Global (Day: hitam, Night: putih) === */
+:root { --border-thick-color: #000; }          /* day mode */
+[data-theme="dark"] { --border-thick-color: #fff; }  /* night mode */
+
+/* Terapkan ke outline umum */
+.card,
+.pill,
+.outline,
+.grid > .card,
+.section-border {
+  border-color: var(--border-thick-color) !important;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* Header dengan garis bawah tebal */
+h1, h2, h3, .h1, .h2, .h3 {
+  border-bottom: 3px solid var(--border-thick-color);
+  padding-bottom: 4px;
+}
+
+/* Hover halus (opsional) */
+.card:hover,
+.pill:hover {
+  filter: brightness(0.98);
+}
+
+/* Jika ada komponen tanpa border bawaan, bisa pakai .outline secara manual */
+/* === Klik-able text default: gelap sebelum hover (match header) === */
+:root {
+  --clickable-fg: #111;         /* warna teks gelap (day mode) */
+}
+[data-theme="dark"] {
+  --clickable-fg: #111;         /* tetap gelap jika ingin konsisten seperti header */
+  /* NOTE: jika nanti terlalu gelap di dark mode, ganti ke #eaeaea di sini */
+}
+
+/* Target elemen yang bisa diklik */
+nav a,
+a.pill,
+a.btn-outline,
+.card a,
+.button,
+.button a {
+  color: var(--clickable-fg) !important;
+  text-decoration: none;
+}
+
+/* Hover/focus tetap jelas tanpa mengubah warna awal */
+nav a:hover,
+a.pill:hover,
+a.btn-outline:hover,
+.card a:hover,
+.button:hover,
+.button a:hover {
+  filter: brightness(0.98);
+  text-decoration: none;
+}
+/* ====== LINK & BUTTON: SERAGAM DENGAN HEADER ====== */
+/* Warna & efek adaptif siang/malam */
+:root{
+  --link-fg: #111;
+  --link-hover-bg: rgba(0,0,0,.06);
+  --link-underline: currentColor;
+}
+[data-theme="dark"]{
+  --link-fg: #eaeaea;
+  --link-hover-bg: rgba(255,255,255,.10);
+}
+
+/* Target hanya elemen yang bisa diklik (bukan teks tebal biasa) */
+nav a,
+a.pill,
+a.btn-outline,
+.card > a,
+.card a,
+button,
+.btn,
+[role="button"]{
+  color: var(--link-fg) !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, filter .15s ease;
+}
+
+/* Hover/focus: underline + highlight tipis, tetap kontras di dark mode */
+nav a:hover,
+a.pill:hover,
+a.btn-outline:hover,
+.card > a:hover,
+.card a:hover,
+button:hover,
+.btn:hover,
+[role="button"]:hover,
+nav a:focus-visible,
+a.pill:focus-visible,
+a.btn-outline:focus-visible,
+.card > a:focus-visible,
+.card a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+[role="button"]:focus-visible{
+  background: var(--link-hover-bg);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  outline: none;
+}
+
+/* Khusus tombol ber-batas (pill/outline): selaras dengan garis global */
+a.pill,
+a.btn-outline,
+button.btn{
+  border-color: var(--border-thick-color) !important;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 12px;
+}
+
+/* Saat hover, cukup ubah border sedikit (tanpa menghilangkan underline) */
+a.pill:hover,
+a.btn-outline:hover,
+button.btn:hover{
+  border-color: var(--border-thick-color) !important;
+  filter: brightness(0.98);
+}
+
+/* Jangan ganggu teks tebal biasa (strong/b) — tidak diubah warnanya */
+strong, b { /* no-op: dibiarkan mengikuti tema */ }
+
+/* === Micro-interactions (hover) === */
+:root{
+  --elev: 0 1px 0 rgba(0,0,0,.04), 0 4px 14px rgba(0,0,0,.06);
+  --elev-dark: 0 1px 0 rgba(255,255,255,.04), 0 4px 14px rgba(255,255,255,.08);
+}
+
+.card,
+a.pill,
+a.btn-outline,
+button.btn {
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    background-color .18s ease,
+    border-color .18s ease,
+    filter .18s ease;
+  will-change: transform, box-shadow;
+}
+
+.card:hover,
+a.pill:hover,
+a.btn-outline:hover,
+button.btn:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: var(--elev);
+}
+
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] a.pill:hover,
+[data-theme="dark"] a.btn-outline:hover,
+[data-theme="dark"] button.btn:hover {
+  box-shadow: var(--elev-dark);
+}
+
+/* Fokus keyboard jelas */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--border-thick-color);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+/* === Scroll reveal (fade + slide-up) === */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+      opacity .5s ease,
+      transform .5s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ========== FAB: Back to top ========== */
+.fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px; height: 44px;
+  border-radius: 999px;
+  display: grid; place-items: center;
+  border: 2px solid var(--border-thick-color);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0; pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .18s ease, transform .18s ease, background-color .18s ease;
+  z-index: 60;
+}
+.fab:hover { background: var(--link-hover-bg); }
+.fab--show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+/* Ikon panah sederhana */
+.fab svg { width: 18px; height: 18px; }
+
+/* ========== Parallax (elemen dengan [data-parallax]) ========== */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-parallax [data-parallax] {
+    will-change: transform;
+    transition: transform .04s linear; /* nyaris real-time */
+  }
+}
+
+/* ========== Tooltips (CSS only) ========== */
+[data-tip] {
+  position: relative;
+}
+@media (hover:hover) {
+  [data-tip]::after {
+    content: attr(data-tip);
+    position: absolute;
+    left: 50%; bottom: calc(100% + 8px);
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 6px 8px;
+    border: 2px solid var(--border-thick-color);
+    border-radius: 8px;
+    background: var(--card-bg, rgba(0,0,0,0));
+    color: inherit;
+    opacity: 0; pointer-events: none;
+    transition: opacity .12s ease, transform .12s ease;
+  }
+  [data-tip]:hover::after,
+  [data-tip]:focus-visible::after {
+    opacity: 1; transform: translateX(-50%) translateY(-2px);
+  }
+}

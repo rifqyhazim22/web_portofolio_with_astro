@@ -1,0 +1,7 @@
+[
+  {"slug":"mobility","title":"Mobilitas & Transport","oneLiner":"Optimasi operasional harian (driver/dispatch) dengan checklist & prompt yang ringkas.","icon":"🚕"},
+  {"slug":"marketing","title":"Marketing & Ads","oneLiner":"Dari ide ke storyboard: template naskah & visual yang modular.","icon":"📣"},
+  {"slug":"smb-sales","title":"UMKM & Sales","oneLiner":"Template penawaran, follow-up, dan CRM ringan berbasis AI.","icon":"🧾"},
+  {"slug":"learning","title":"Pembelajaran & Penelitian","oneLiner":"Kerangka riset: tanya → jelaskan → sanggah, dengan rangkuman rapi.","icon":"📚"},
+  {"slug":"finance","title":"Personal Finance & Crypto","oneLiner":"Kerangka membaca data & berita secara skeptis (bukan saran investasi).","icon":"🪙"}
+]

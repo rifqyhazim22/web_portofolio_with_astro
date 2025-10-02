@@ -1,0 +1,89 @@
+:root{
+  --bg: #0b1020;        /* dark */
+  --fg: #e6e9f2;
+  --muted:#a3acc4;
+  --card:#101830;
+  --pill:#111b36;
+  --line:#2b3759;
+  --accent:#8fb3ff;
+  --focus:#bed3ff;
+  --radius:14px;
+  --radius-sm:10px;
+  --shadow: 0 8px 24px rgba(0,0,0,.25);
+  --trans-fast: 150ms ease;
+}
+:root[data-theme="light"]{
+  --bg:#f7f8fc;
+  --fg:#0b1020;
+  --muted:#3c4661;
+  --card:#ffffff;
+  --pill:#ffffff;
+  --line:#dfe5f4;
+  --accent:#335cff;
+  --focus:#2445cc;
+  --shadow: 0 8px 24px rgba(14,24,64,.08);
+}
+
+/* Reset ringan */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font:16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--fg);
+  background:var(--bg);
+  transition: background-color var(--trans-fast), color var(--trans-fast);
+}
+
+/* Kontainer & section */
+.container{max-width:1080px;margin:0 auto;padding:24px}
+.section{margin:28px 0}
+.hr{border:0;border-top:2px solid var(--line);margin:24px 0}
+
+/* Heading */
+.h1{font-size:34px;line-height:1.2;margin:0 0 10px}
+.h2{font-size:24px;line-height:1.25;margin:18px 0 8px}
+.k{font-weight:700}
+.sub{color:var(--muted)}
+
+/* CARD */
+.card{
+  background:var(--card);
+  border:2px solid var(--line);
+  border-radius:var(--radius);
+  padding:14px 16px;
+  box-shadow:var(--shadow);
+}
+.card.link{display:block;text-decoration:none;color:inherit}
+.card.link:hover{border-color:var(--focus)}
+
+/* GRID sederhana */
+.grid{display:grid;gap:14px}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+
+/* PILL button (nav & link) */
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 14px;border-radius:999px;
+  background:var(--pill);
+  border:2px solid var(--line);
+  color:var(--fg); text-decoration:none;
+  transition: transform var(--trans-fast), border-color var(--trans-fast), background-color var(--trans-fast), color var(--trans-fast);
+}
+.pill:hover{border-color:var(--focus); transform:translateY(-1px)}
+.pill.ghost{background:transparent}
+
+/* NAV bar */
+.nav{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+}
+.brand{font-weight:700;padding:8px 12px;border-radius:999px;border:2px solid var(--line);text-decoration:none;color:var(--fg);background:var(--pill)}
+.spacer{flex:1}
+
+/* Link normal */
+a{color:var(--accent);text-decoration:underline 1px transparent;transition:color var(--trans-fast), text-decoration-color var(--trans-fast)}
+a:hover{ text-decoration-color:var(--accent) }
+
+/* Hanya transisi saat ganti tema, bukan saat pindah halaman */
+*{transition-property: background-color, border-color, color, fill, stroke; transition-duration: var(--trans-fast); transition-timing-function: ease}
