@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import NextSteps from "../components/NextSteps.astro";
+import BaseLink from "../components/BaseLink.astro";
 ---
 <Layout title="About — Rifqy Hazim HR">
   <section style="margin-top:10px">
@@ -32,18 +33,18 @@ import NextSteps from "../components/NextSteps.astro";
   <section>
     <h2 class="h2">Apa yang Saya Lakukan</h2>
     <div class="grid grid-3" style="margin-top:10px">
-      <a class="card" href="/works" style="text-decoration:none; color:inherit">
+      <BaseLink class="card" href="/works" style="text-decoration:none; color:inherit">
         <div class="k">Prompt Engineering</div>
         <div class="sub">Video · Image · Text — dari ide ke hasil.</div>
-      </a>
-      <a class="card" href="/projects" style="text-decoration:none; color:inherit">
+      </BaseLink>
+      <BaseLink class="card" href="/projects" style="text-decoration:none; color:inherit">
         <div class="k">Web Delivery</div>
         <div class="sub">Landing ringan & cepat (Astro · GitHub · Vercel).</div>
-      </a>
-      <a class="card" href="/industry" style="text-decoration:none; color:inherit">
+      </BaseLink>
+      <BaseLink class="card" href="/industry" style="text-decoration:none; color:inherit">
         <div class="k">Strategy & Edukasi</div>
         <div class="sub">Playbooks & kerangka kerja yang bisa direplikasi.</div>
-      </a>
+      </BaseLink>
     </div>
   </section>
 
@@ -53,9 +54,9 @@ import NextSteps from "../components/NextSteps.astro";
   <section>
     <h2 class="h2">Learning Hub</h2>
     <div class="grid grid-3" style="margin-top:10px">
-      <a class="card" href="/industry" style="text-decoration:none; color:inherit">AI Basics</a>
-      <a class="card" href="/industry" style="text-decoration:none; color:inherit">Prompt Patterns</a>
-      <a class="card" href="/industry" style="text-decoration:none; color:inherit">Tools & Workflow</a>
+      <BaseLink class="card" href="/industry" style="text-decoration:none; color:inherit">AI Basics</BaseLink>
+      <BaseLink class="card" href="/industry" style="text-decoration:none; color:inherit">Prompt Patterns</BaseLink>
+      <BaseLink class="card" href="/industry" style="text-decoration:none; color:inherit">Tools & Workflow</BaseLink>
     </div>
   </section>
 

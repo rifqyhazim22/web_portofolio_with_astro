@@ -10,10 +10,11 @@ const links = [
   { href: "/contact",  label: "Contact",   key: "contact" },
 ];
 const shown = links.filter(l => l.key !== current);
+import BaseLink from "./BaseLink.astro";
 ---
 <section>
   <h2 class="h2">Jelajah Berikutnya</h2>
   <div class="nav" style="margin-top:8px">
-    {shown.map(l => <a class="pill" href={l.href}>{l.label}</a>)}
+    {shown.map(l => <BaseLink class="pill" href={l.href}>{l.label}</BaseLink>)}
   </div>
 </section>

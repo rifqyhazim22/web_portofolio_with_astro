@@ -1,22 +1,23 @@
 ---
 import updates from "../data/updates.json";
+import BaseLink from "./BaseLink.astro";
 const latest = updates.slice(0, 3);
 ---
 <section id="updates" class="home-updates">
   <div class="hdr">
     <h2>Updates</h2>
-    <a class="btn" href="/updates" aria-label="Lihat semua updates">Lihat semua</a>
+    <BaseLink class="btn" href="/updates" aria-label="Lihat semua updates">Lihat semua</BaseLink>
   </div>
 
   <ul class="grid">
     {latest.map((u) => (
       <li class="card">
         <!-- Seluruh kartu jadi link ke /updates -->
-        <a href="/updates" aria-label={`Buka halaman Updates: ${u.title}`}>
+        <BaseLink href="/updates" aria-label={`Buka halaman Updates: ${u.title}`}>
           <small>{u.tag} · {u.date}</small>
           <h3>{u.title}</h3>
           <p>{u.excerpt}</p>
-        </a>
+        </BaseLink>
       </li>
     ))}
   </ul>

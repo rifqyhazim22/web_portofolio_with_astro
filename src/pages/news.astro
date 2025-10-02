@@ -1,15 +1,17 @@
 ---
 export const prerender = true;
+import { withBase } from "../utils/paths";
+const target = withBase("/updates");
 ---
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=/updates" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
     <title>Redirecting…</title>
-    <link rel="canonical" href="/updates" />
+    <link rel="canonical" href={target} />
   </head>
   <body>
-    <p>Mengalihkan ke <a href="/updates">/updates</a>…</p>
+    <p>Mengalihkan ke <a href={target}>{target}</a>…</p>
   </body>
 </html>

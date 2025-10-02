@@ -1,0 +1,8 @@
+---
+const { href, ...attrs } = Astro.props;
+import { withBase } from "../utils/paths";
+const finalHref = withBase(href);
+---
+<a href={finalHref} {...attrs}>
+  <slot />
+</a>

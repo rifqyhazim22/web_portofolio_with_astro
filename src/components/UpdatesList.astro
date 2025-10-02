@@ -26,18 +26,19 @@ const {
   ] as Item[],
   showAllLink = true,
 } = Astro.props;
+import BaseLink from "./BaseLink.astro";
 ---
 <div class="grid" style="margin-top:14px">
   {items.map((it) => (
-    <a class="card" href={it.href}>
+    <BaseLink class="card" href={it.href}>
       <div class="k">{it.title}</div>
       <div class="sub">{it.sub}</div>
-    </a>
+    </BaseLink>
   ))}
 </div>
 
 {showAllLink && (
   <div style="margin-top:14px">
-    <a class="pill" href="/updates">Lihat semua Updates →</a>
+    <BaseLink class="pill" href="/updates">Lihat semua Updates →</BaseLink>
   </div>
 )}

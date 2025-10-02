@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BaseLink from "../components/BaseLink.astro";
 ---
 <Layout title="Rifqy Hazim HR — Home">
   <h1 class="h1">Rifqy Hazim HR</h1>
@@ -7,8 +8,8 @@ import Layout from "../layouts/Layout.astro";
   <p>Saya merancang pengalaman digital dengan AI—ringkas, terukur, dan bisa dipakai hari ini.</p>
 
   <div class="pills" style="margin:10px 0 18px">
-    <a href="/works" class="pill">Lihat Works ↗</a>
-    <a href="/industry" class="pill">Belajar AI (Gratis) ↗</a>
+    <BaseLink href="/works" class="pill">Lihat Works ↗</BaseLink>
+    <BaseLink href="/industry" class="pill">Belajar AI (Gratis) ↗</BaseLink>
   </div>
 
   <section class="card">
@@ -19,18 +20,18 @@ import Layout from "../layouts/Layout.astro";
   <section>
     <h2 class="h2">Apa yang Saya Lakukan</h2>
     <div class="grid grid-2">
-      <a class="tile" href="/works">
+      <BaseLink class="tile" href="/works">
         <div class="k">Prompt Engineering</div>
         <div class="sub">Video, image, text—dari ide ke hasil.</div>
-      </a>
-      <a class="tile" href="/projects">
+      </BaseLink>
+      <BaseLink class="tile" href="/projects">
         <div class="k">Web Delivery</div>
         <div class="sub">Landing ringan & cepat (Astro · GitHub).</div>
-      </a>
-      <a class="tile" href="/industry">
+      </BaseLink>
+      <BaseLink class="tile" href="/industry">
         <div class="k">Strategy & Edukasi</div>
         <div class="sub">Playbooks & kerangka kerja yang bisa dipakai.</div>
-      </a>
+      </BaseLink>
     </div>
   </section>
 
@@ -38,45 +39,45 @@ import Layout from "../layouts/Layout.astro";
     <h2 class="h2">Playbooks</h2>
     <p class="sub">Kerangka kerja praktis untuk lima industri masa depan—AI→AGI/ASI, Crypto, Biotechnology, Energi Terbarukan, dan Space.</p>
     <div class="pills" style="margin-top:10px">
-      <a href="/industry" class="pill">Lihat Playbooks & Edukasi AI →</a>
+      <BaseLink href="/industry" class="pill">Lihat Playbooks & Edukasi AI →</BaseLink>
     </div>
   </section>
 
   <section>
     <h2 class="h2">Learning Hub</h2>
     <div class="grid grid-2">
-      <a href="/industry#ai-basics" class="tile">
+      <BaseLink href="/industry#ai-basics" class="tile">
         <div class="k">AI Basics</div>
         <div class="sub">Konsep inti, istilah, dan etika; landasan yang aman & praktis.</div>
-      </a>
-      <a href="/industry#prompt-patterns" class="tile">
+      </BaseLink>
+      <BaseLink href="/industry#prompt-patterns" class="tile">
         <div class="k">Prompt Patterns</div>
         <div class="sub">Polanya apa, kapan dipakai, dan cara menghindari jebakan umum.</div>
-      </a>
-      <a href="/industry#tools-workflow" class="tile">
+      </BaseLink>
+      <BaseLink href="/industry#tools-workflow" class="tile">
         <div class="k">Tools & Workflow</div>
         <div class="sub">Pipeline dari brief → eksperimen → hasil, dengan contoh alat yang ringan.</div>
-      </a>
+      </BaseLink>
     </div>
   </section>
 
   <section>
     <h2 class="h2">Updates</h2>
     <div class="grid">
-      <a class="tile" href="/updates/ai-web">
+      <BaseLink class="tile" href="/updates/ai-web">
         <div class="k">AI & Web: Kolaborasi Masa Depan</div>
         <div class="sub">Kenapa integrasi AI & Web penting untuk kreator & developer.</div>
-      </a>
-      <a class="tile" href="/updates/5-industries">
+      </BaseLink>
+      <BaseLink class="tile" href="/updates/5-industries">
         <div class="k">Lima Industri Masa Depan yang Sedang Memanas</div>
         <div class="sub">AI, Crypto, Biotech, Renewables, Space—ekosistem inovasi.</div>
-      </a>
-      <a class="tile" href="/updates/prompt-engineering">
+      </BaseLink>
+      <BaseLink class="tile" href="/updates/prompt-engineering">
         <div class="k">Belajar Prompt Engineering (Praktis)</div>
         <div class="sub">Metode iterasi 3 langkah untuk hasil yang stabil.</div>
-      </a>
+      </BaseLink>
     </div>
-    <div class="pills" style="margin-top:12px"><a href="/updates" class="pill">Lihat semua updates →</a></div>
+    <div class="pills" style="margin-top:12px"><BaseLink href="/updates" class="pill">Lihat semua updates →</BaseLink></div>
   </section>
 
   <div class="hr"></div>
@@ -84,11 +85,11 @@ import Layout from "../layouts/Layout.astro";
   <section>
     <h2 class="h2">Jelajah Berikutnya</h2>
     <div class="pills">
-      <a class="pill" href="/about">About</a>
-      <a class="pill" href="/industry">Playbooks</a>
-      <a class="pill" href="/works">Works</a>
-      <a class="pill" href="/projects">Projects</a>
-      <a class="pill" href="/contact">Contact</a>
+      <BaseLink class="pill" href="/about">About</BaseLink>
+      <BaseLink class="pill" href="/industry">Playbooks</BaseLink>
+      <BaseLink class="pill" href="/works">Works</BaseLink>
+      <BaseLink class="pill" href="/projects">Projects</BaseLink>
+      <BaseLink class="pill" href="/contact">Contact</BaseLink>
     </div>
   </section>
 </Layout>

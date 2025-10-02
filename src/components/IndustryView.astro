@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BaseLink from "./BaseLink.astro";
 const { item } = Astro.props; // { icon, title, desc }
 ---
 <Layout title={`${item.title} — Playbook`}>
-  <a class="pill" href="/industry">← Kembali</a>
+  <BaseLink class="pill" href="/industry">← Kembali</BaseLink>
   <h1 class="h1" style="margin-top:10px">{item.icon} {item.title}</h1>
   <p class="sub" style="margin-bottom:14px">{item.desc}</p>
 
